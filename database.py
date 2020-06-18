@@ -5,7 +5,7 @@ config = {
     'host': 'localhost',
     'user': 'dsimmons',
     'password': 'test',
-    'database': 'laravel'
+    'database': 'test'
 }
 
 # Database class

@@ -1,7 +1,6 @@
 import mysql.connector
 import datetime
 from database import Database
-#from database import db, cursor
 
 # Logger class extends database class
 class Logger(Database):
@@ -24,7 +23,7 @@ class Logger(Database):
     # Fetch a log record
     def get_row(self, id):
         try:
-            sql = ("SELECT * FROM kb_articles WHERE id = %s")
+            sql = ("SELECT * FROM logs WHERE id = %s")
             self.cursor.execute(sql, (id,))
             result = self.cursor.fetchone()
             return result
@@ -65,7 +64,3 @@ class Logger(Database):
         except mysql.connector.Error as err:
             print(err.msg)
             return False
-
-obj = Logger()
-
-data = obj.get_row(2)
