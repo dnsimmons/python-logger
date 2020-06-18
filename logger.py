@@ -64,3 +64,6 @@ class Logger(Database):
         except mysql.connector.Error as err:
             print(err.msg)
             return False
+
+obj = Logger()
+data = obj.get_row(2)

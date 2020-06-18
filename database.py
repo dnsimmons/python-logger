@@ -1,11 +1,16 @@
+import os
 import mysql.connector
+from dotenv import load_dotenv
+
+# Load environment vars
+load_dotenv()
 
 # Database config
 config = {
-    'host': 'localhost',
-    'user': 'dsimmons',
-    'password': 'test',
-    'database': 'test'
+    'host': os.getenv("DB_HOSTNAME"),
+    'user': os.getenv("DB_USERNAME"),
+    'password': os.getenv("DB_PASSWORD"),
+    'database': os.getenv("DB_DATABASE")
 }
 
 # Database class
@@ -22,4 +27,4 @@ class Database:
             self.cursor = self.db.cursor()
         except mysql.connector.Error as err:
             print(err.msg)
-            return False
+            exit(1)
