@@ -1,6 +1,11 @@
 # python-logger
 Simple MySQL logger CRUD  in Python 3
 
+### Dependancies
+
+    $ pip3 install mysql-connector-python
+    $ pip3 install python-dotenv
+
 ### Configure
 
 Create a .env file in your project directory to hold your database config:
