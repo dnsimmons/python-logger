@@ -1,7 +1,7 @@
 # python-logger
 Simple MySQL logger CRUD  in Python 3
 
-### Dependancies
+### Dependencies
 
     $ pip3 install mysql-connector-python
     $ pip3 install python-dotenv
