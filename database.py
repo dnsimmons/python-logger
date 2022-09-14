@@ -2,6 +2,7 @@ import os
 import mysql.connector
 from dotenv import load_dotenv
 
+
 # Load environment vars
 load_dotenv()
 
@@ -13,11 +14,14 @@ config = {
     'database': os.getenv("DB_DATABASE")
 }
 
+
 # Database class
 class Database:
 
     # Class constructor
     def __init__(self):
+        self.db = None
+        self.cursor = None
         self.connect()
 
     # Connect to the database
